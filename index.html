@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1115">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<title>SortBox</title>
+</head>
+<body>
+<header>
+  <h1>SortBox</h1>
+  <div class="actions">
+    <button id="btnExport" title="Export">⬇︎</button>
+    <button id="btnSettings" title="Settings">⚙︎</button>
+  </div>
+</header>
+
+<div id="banner" class="banner" hidden></div>
+
+<section class="add">
+  <input id="manualUrl" type="url" placeholder="লিংক পেস্ট করুন (অথবা Instagram থেকে Share করুন)" inputmode="url">
+  <button id="btnAdd">যোগ করুন</button>
+</section>
+
+<input id="search" class="search" type="search" placeholder="খুঁজুন…">
+<nav id="chips" class="chips"></nav>
+
+<main id="list"></main>
+
+<dialog id="settings">
+  <form method="dialog">
+    <h2>Settings</h2>
+    <label>Gemini API key (ফ্রি, aistudio.google.com থেকে)
+      <input id="apiKey" type="password" autocomplete="off" placeholder="AIza…">
+    </label>
+    <label>Model
+      <input id="model" type="text" placeholder="gemini-2.5-flash">
+    </label>
+    <label>ক্যাটাগরি (কমা দিয়ে আলাদা করুন)
+      <textarea id="cats" rows="3"></textarea>
+    </label>
+    <p class="hint">API key শুধু আপনার ফোনেই থাকে, কোথাও আপলোড হয় না।</p>
+    <div class="row">
+      <button value="cancel">বাতিল</button>
+      <button id="saveSettings" value="ok" class="primary">সেভ</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="editor">
+  <form method="dialog">
+    <h2 id="editTitle"></h2>
+    <label>ক্যাটাগরি
+      <select id="editCat"></select>
+    </label>
+    <label>নোট
+      <textarea id="editNote" rows="2"></textarea>
+    </label>
+    <div class="row">
+      <button id="btnDelete" value="delete" class="danger">মুছুন</button>
+      <button id="btnReanalyze" value="reanalyze">আবার AI</button>
+      <button value="ok" class="primary">ঠিক আছে</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

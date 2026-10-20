@@ -1,0 +1,39 @@
+:root{--bg:#0f1115;--card:#181b22;--line:#262a33;--text:#e8eaf0;--mut:#8b93a3;--acc:#6ee7b7;--danger:#f87171}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,"Noto Sans Bengali",sans-serif}
+body{padding:0 14px calc(24px + env(safe-area-inset-bottom));max-width:720px;margin:0 auto}
+header{display:flex;align-items:center;justify-content:space-between;padding:calc(14px + env(safe-area-inset-top)) 0 10px}
+h1{font-size:22px;margin:0;letter-spacing:.2px}
+.actions button{background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;width:40px;height:40px;font-size:18px;margin-left:8px}
+.banner{background:#1d2a24;border:1px solid #2c4a3d;color:var(--acc);padding:10px 12px;border-radius:12px;margin-bottom:10px;font-size:14px}
+.banner.err{background:#2b1d1d;border-color:#5a2c2c;color:var(--danger)}
+.add{display:flex;gap:8px;margin:6px 0 10px}
+.add input{flex:1}
+input,textarea,select{width:100%;background:var(--card);border:1px solid var(--line);color:var(--text);border-radius:10px;padding:11px 12px;font:inherit}
+button{font:inherit;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+button.primary{background:var(--acc);color:#04130c;border-color:var(--acc);font-weight:600}
+button.danger{color:var(--danger)}
+.search{margin-bottom:10px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:6px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;border-radius:999px;padding:6px 12px;font-size:14px;color:var(--mut)}
+.chip.on{background:var(--acc);color:#04130c;border-color:var(--acc);font-weight:600}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px}
+.item .top{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:12px;color:var(--mut)}
+.badge{background:#222733;border-radius:999px;padding:2px 9px;color:var(--text)}
+.badge.cat{background:#1f3a31;color:var(--acc)}
+.item h3{margin:8px 0 4px;font-size:16px}
+.item p{margin:0 0 8px;color:#c4c9d4;font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.tag{font-size:12px;color:var(--mut)}
+.item .btns{display:flex;gap:8px}
+.item a{color:var(--acc);text-decoration:none;font-size:14px}
+.pending{opacity:.7}
+.empty{text-align:center;color:var(--mut);padding:40px 10px}
+dialog{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:16px;width:min(92vw,460px);padding:16px}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog h2{margin:0 0 10px;font-size:18px}
+dialog label{display:block;font-size:13px;color:var(--mut);margin:10px 0}
+dialog label input,dialog label textarea,dialog label select{margin-top:6px}
+.row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px;flex-wrap:wrap}
+.hint{font-size:12px;color:var(--mut)}
